@@ -1,16 +1,23 @@
 package DataPurge;
 
+import java.awt.font.FontRenderContext;
 import java.util.ArrayList;
 
 public class Main
 {
     public static void main(String[] args)
     {
+
         ArrayList<String> members = new ArrayList<String>();
         addMembers(members);
 
+        DataPurge.removeDuplicates(members);
+        DataPurge.removeNames(members, "Daphne");
+
+        for (String member : members) {System.out.println(member);}
 
     }
+
     public static void addMembers(ArrayList<String> emails)
     {
         emails.add("London Braun");
