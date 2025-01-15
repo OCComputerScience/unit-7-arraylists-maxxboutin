@@ -6,8 +6,7 @@ import java.util.ArrayList;
 public class Main
 {
     public static void main(String[] args)
-    {
-
+    {/*
         ArrayList<String> members = new ArrayList<String>();
         addMembers(members);
 
@@ -38,5 +37,7 @@ public class Main
         emails.add("Jaime Wolf");
         emails.add("London Braun");
 
+    }
+   */
     }
 }

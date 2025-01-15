@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class DataPurge
 {
+    /*
 
     public static void removeDuplicates(ArrayList<String> people)
     {
@@ -79,4 +80,6 @@ public class DataPurge
         }
 
     }
+
+    */
 }
