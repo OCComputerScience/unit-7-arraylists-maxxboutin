@@ -7,6 +7,8 @@ public class GeoLocation
 
     private double latitude;
     private double longitude;
+    private String locName;
+
 
     /**
      * Constructs a geo location object with given latitude and longitude
