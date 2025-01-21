@@ -14,6 +14,7 @@ public class ArrayListMethods
 
     public static void duplicate(ArrayList<Double> list)
     {
+
         ArrayList<Double> duplicateList = new ArrayList<>();
 
         duplicateList.addAll(list);
@@ -23,5 +24,4 @@ public class ArrayListMethods
     }
 
 
-    public static
 }
