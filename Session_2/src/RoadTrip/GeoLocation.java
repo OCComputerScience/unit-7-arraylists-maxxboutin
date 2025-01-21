@@ -13,8 +13,9 @@ public class GeoLocation
     /**
      * Constructs a geo location object with given latitude and longitude
      */
-    public GeoLocation(double theLatitude, double theLongitude)
+    public GeoLocation(String location, double theLatitude, double theLongitude)
     {
+        locName = location;
         latitude = theLatitude;
         longitude = theLongitude;
     }
