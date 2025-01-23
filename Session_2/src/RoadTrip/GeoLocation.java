@@ -11,7 +11,7 @@ public class GeoLocation
 
 
     /**
-     * Constructs a geo location object with given latitude and longitude
+     * Constructs a geolocation object with given latitude and longitude
      */
     public GeoLocation(String location, double theLatitude, double theLongitude)
     {
@@ -21,7 +21,7 @@ public class GeoLocation
     }
 
     /**
-     * Returns the latitude of this geo location
+     * Returns the latitude of this geolocation
      */
     public double getLatitude()
     {
@@ -29,21 +29,21 @@ public class GeoLocation
     }
 
     /**
-     * returns the longitude of this geo location
+     * returns the longitude of this geolocation
      */
     public double getLongitude()
     {
         return longitude;
     }
 
-    // returns a string representation of this geo location
+    // returns a string representation of this geolocation
     public String toString()
     {
-        return "latitude: " + latitude + ", longitude: " + longitude;
+        return "Location: " + locName  + " latitude: " + getLatitude() + ", longitude: " + getLongitude();
     }
 
-    // returns the distance in miles between this geo location and the given
-    // other geo location
+    // returns the distance in miles between this geolocation and the given
+    // other geolocation
     public double distanceFrom(GeoLocation other)
     {
         double lat1 = Math.toRadians(latitude);
@@ -51,10 +51,12 @@ public class GeoLocation
         double lat2 = Math.toRadians(other.latitude);
         double long2 = Math.toRadians(other.longitude);
         // apply the spherical law of cosines with a triangle composed of the
-        // two locations and the north pole
+        // two locations and the North Pole
         double theCos = Math.sin(lat1) * Math.sin(lat2) +
                 Math.cos(lat1) * Math.cos(lat2) * Math.cos(long1 - long2);
         double arcLength = Math.acos(theCos);
         return arcLength * RADIUS;
     }
+
+    public String getName() {return locName;}
 }
