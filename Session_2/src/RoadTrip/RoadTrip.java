@@ -27,7 +27,22 @@ public class RoadTrip
     //this will return how many stops there are
     public int getNumberOfStops ()
     {
-        return geoLocations.size();
+
+        double totalDistance = 0;
+
+        for (int i = 0; i < locationsList.size(); i++)
+        {
+
+            GeoLocation location = locationsList.get(i);
+
+            GeoLocation first = location;
+
+            totalDistance += first.distanceFrom(location);
+
+            System.out.println(totalDistance);
+
+        }
+
     }
 
     //this will take in the info of the locations and will return the number of miles total
