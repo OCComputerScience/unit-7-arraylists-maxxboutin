@@ -36,10 +36,14 @@ public class GeoLocation
         return longitude;
     }
 
+    // returns location name
+    public String getLocName() {return locName;}
+
     // returns a string representation of this geolocation
+    @Override
     public String toString()
     {
-        return "Location: " + locName  + " latitude: " + getLatitude() + ", longitude: " + getLongitude();
+        return getLocName()  + " (" + getLatitude() + ", " + getLongitude() + ")";
     }
 
     // returns the distance in miles between this geolocation and the given
@@ -58,5 +62,6 @@ public class GeoLocation
         return arcLength * RADIUS;
     }
 
+    //gets the name of the location
     public String getName() {return locName;}
 }

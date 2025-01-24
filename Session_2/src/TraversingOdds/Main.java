@@ -38,7 +38,7 @@ public class Main
             {
 
                 list.remove(i);
-
+                i--;
             }
 
         }
