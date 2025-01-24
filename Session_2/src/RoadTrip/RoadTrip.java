@@ -26,12 +26,20 @@ public class RoadTrip
     public void getTripLength (ArrayList<GeoLocation> locationsList)
     {
 
-        GeoLocation first = locationsList.get(0);
-        GeoLocation second  = locationsList.get(1);
-        GeoLocation third = locationsList.get(2);
+        double totalDistance = 0;
 
+        for (int i = 0; i < locationsList.size(); i++)
+        {
 
-        System.out.println(first.distanceFrom(second));
+            GeoLocation location = locationsList.get(i);
+
+            GeoLocation first = location;
+
+            totalDistance += first.distanceFrom(location);
+
+            System.out.println(totalDistance);
+
+        }
 
     }
 
