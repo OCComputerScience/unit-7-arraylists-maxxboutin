@@ -26,7 +26,7 @@ public class Main
 
         //prints out the total miles
         System.out.print("Total Miles: ");
-        trips.getTripLength();
+        //trips.getTripLength();
     }
 
 }

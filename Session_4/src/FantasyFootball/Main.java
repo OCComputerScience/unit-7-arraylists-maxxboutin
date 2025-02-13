@@ -27,5 +27,14 @@ public class Main
         array.add("Sauron");
         array.add("Melkor");
         array.add("Lúthien");
+
+        selectPlayer(array);
+    }
+
+    public static void selectPlayer (ArrayList<String> array)
+    {
+
+        
+
     }
 }

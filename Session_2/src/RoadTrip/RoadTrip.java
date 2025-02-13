@@ -2,22 +2,19 @@ package RoadTrip;
 
 import java.util.ArrayList;
 
-public class RoadTrip
-{
+public class RoadTrip {
     //makes list for the locations
     ArrayList<GeoLocation> geoLocations;
 
     //initializes the list
-    public RoadTrip ()
-    {
+    public RoadTrip() {
 
         this.geoLocations = new ArrayList<GeoLocation>();
 
     }
 
     //makes a stop for a location using the name with the lat and lon
-    public void addStop (String name, double lat, double lon)
-    {
+    public void addStop(String name, double lat, double lon) {
         //makes stop with location
         GeoLocation newStop = new GeoLocation(name, lat, lon);
 
@@ -25,11 +22,12 @@ public class RoadTrip
     }
 
     //this will return how many stops there are
-    public int getNumberOfStops ()
-    {
+    public int getNumberOfStops() {
 
         double totalDistance = 0;
-
+        return -1;
+    }
+        /*
         for (int i = 0; i < locationsList.size(); i++)
         {
 
@@ -85,4 +83,5 @@ public class RoadTrip
 
         return endString;
     }
+*/
 }
