@@ -1,6 +1,7 @@
 package FantasyFootball;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Main
 {
@@ -8,6 +9,7 @@ public class Main
     {
         ArrayList<String> availablePlayers = new ArrayList<String>();
         addPlayers(availablePlayers);
+        selectPlayer(availablePlayers);
     }
 
     public static void addPlayers(ArrayList<String> array)
@@ -27,14 +29,40 @@ public class Main
         array.add("Sauron");
         array.add("Melkor");
         array.add("Lúthien");
-
-        selectPlayer(array);
     }
 
     public static void selectPlayer (ArrayList<String> array)
     {
 
-        
+        ArrayList<String> takenPlayers = new ArrayList<String>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            System.out.println("Enter name of player to add:");
+
+            Scanner userInputScanner = new Scanner(System.in);
+
+            String userInput = userInputScanner.nextLine();
+
+            array.remove(userInput);
+            takenPlayers.add(userInput);
+
+            for (String takenPlayer : takenPlayers)
+            {
+                if (takenPlayer.equals(userInput))
+                {
+                    i--;
+                    System.out.println(userInput + " is not available player.");
+                }
+            }
+        }
+
+        System.out.println("Final Team Roster:");
+
+        for (String loop : takenPlayers)
+        {
+            System.out.println(loop);
+        }
 
     }
 }
