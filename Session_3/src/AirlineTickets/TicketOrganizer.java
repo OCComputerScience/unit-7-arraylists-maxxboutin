@@ -16,6 +16,26 @@ public class TicketOrganizer
         return tickets;
     }
 
-    
+    public String printPassengersByBoardingGroup ()
+    {
+
+
+
+        for (int i = 0; i < tickets.size(); i++)
+        {
+
+            AirlineTicket ticket = tickets.get(i);
+
+            for (int j = 0; j < tickets.size(); j++)
+            {
+                if (ticket.getBoardingGroup() > )
+                {
+
+                }
+            }
+        }
+
+        return null;
+    }
 
 }

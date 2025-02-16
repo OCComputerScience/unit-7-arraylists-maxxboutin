@@ -6,19 +6,21 @@ public class Main
 {
     public static void main(String[] args)
     {
+        //makes ticket array
         ArrayList<AirlineTicket> tickets = new ArrayList<>();
 
-        //This creates a randomized list of passengers
+        //This inputs the passengers information into the array
         addPassengers(tickets);
-        for(AirlineTicket elem: tickets)
+        for(AirlineTicket loop: tickets)
         {
-            System.out.println(elem);
+            System.out.println(loop);
         }
 
         // Create the TicketOrganizer object
+        TicketOrganizer orderedList = new TicketOrganizer(tickets);
 
         // Print the methods
-        System.out.println("\nPassengers Ordered by Boarding Group:");
+        System.out.println("\nPassengers Ordered by Boarding Group:" + orderedList.printPassengersByBoardingGroup());
 
         System.out.println("\nPassengers in line who can board together:");
 
