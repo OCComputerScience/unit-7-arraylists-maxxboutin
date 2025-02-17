@@ -16,4 +16,14 @@ public class Billboard
     {
         System.out.println(top10);
     }
+
+    public void add(String musician)
+    {
+
+        if (!top10.contains(musician))
+        {
+            
+        }
+
+    }
 }
